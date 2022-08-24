@@ -10,30 +10,30 @@ let playTheGame = (playerSelection, computerSelection) => {
     switch(playerSelection) {
         case "rock":
             if (computerSelection === "rock"){
-                return ("You draw! " + computerSelection + " is equal to " + playerSelection);
+                return [0, ("You draw! " + computerSelection + " is equal to " + playerSelection)];
             }
             else if (computerSelection === "paper"){
-                return ("You lose! " + computerSelection + " is stronger than " + playerSelection);
+                return [0, ("You lose! " + computerSelection + " is stronger than " + playerSelection)];
             }
-            else return ("You win! " + computerSelection + " is weaker than " + playerSelection);
+            else return [1, ("You win! " + computerSelection + " is weaker than " + playerSelection)];
         
         case "paper":
             if (computerSelection === "paper"){
-                return ("You draw! " + computerSelection + " is equal to " + playerSelection);
+                return [0, ("You draw! " + computerSelection + " is equal to " + playerSelection)];
             }
             else if (computerSelection === "scissors"){
-                return ("You lose! " + computerSelection + " is stronger than " + playerSelection);
+                return [0, ("You lose! " + computerSelection + " is stronger than " + playerSelection)];
             }
-            else return ("You win! " + computerSelection + " is weaker than " + playerSelection);  
+            else return [1, ("You win! " + computerSelection + " is weaker than " + playerSelection)];  
         
         case "scissors":
             if (computerSelection === "scissors"){
-                return ("You draw! " + computerSelection + " is equal to " + playerSelection);
+                return [0, ("You draw! " + computerSelection + " is equal to " + playerSelection)];
             }
             else if (computerSelection === "rock"){
-                return ("You lose! " + computerSelection + " is stronger than " + playerSelection);
+                return [0, ("You lose! " + computerSelection + " is stronger than " + playerSelection)];
             }
-            else return ("You win! " + computerSelection + " is weaker than " + playerSelection);
+            else return [1, ("You win! " + computerSelection + " is weaker than " + playerSelection)];
     }
 }
 

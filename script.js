@@ -1,4 +1,5 @@
-console.log("This is a test");
+/* do a hash map to make the stuff easier */
+/* authenticate input also */
 
 let getComputerChoice = () => {
     let choices = ["rock","paper","scissors"];
@@ -37,7 +38,21 @@ let playTheGame = (playerSelection, computerSelection) => {
     }
 }
 
-let playerSelection = prompt("What is your selection? Rock, Paper, or scissors? ").toLowerCase();
-let computerSelection = getComputerChoice();
+let game = () => {
+    res = 0
+    for (let i = 0; i < 5; i++){
+        let playerSelection = prompt("What is your selection? Rock, Paper, or scissors? ").toLowerCase();
+        let computerSelection = getComputerChoice();
+        let gameres = playTheGame(playerSelection, computerSelection);
+        console.log(gameres[1])
+        if (gameres[0] === 1) {
+            res += 1
+        }
+    }
+    if (res >= 3) {
+        return ("You won with " + res + " points out of 5!");
+    }
+    return ("You lost with " + res + " out of 5!");
+}
 
-console.log(playTheGame(playerSelection, computerSelection));
+console.log(game());
